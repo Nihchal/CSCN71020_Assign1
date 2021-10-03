@@ -7,7 +7,7 @@ void subtract();
 
 void main() {
 
-	printWelcomeMenu();
+	printWelcomeMenu();		
 
 	printOptions();
 
@@ -40,22 +40,17 @@ void printOptions() {
 
 void add() {
 	double num1, num2, result;
-	printf("Enter the first value:");
-	scanf_s("%lf", &num1);
-	printf("Enter the second value:");
-	scanf_s("%lf", &num2);
+	printf("Enter two values: ");  // ask the user for 2 numbers.
+	scanf_s("%lf %lf", &num1, &num2);
 	result = num1 + num2;
-	printf("%.0lf + %.0lf = %.lf\n", num1, num2, result);
+	printf("%.lf + %.lf = %.lf\n", num1, num2, result);  // print out the results and make sure there are no decimal points.
 }
 
 void subtract()
 {
-	double num1, num2, result;
-	
-	printf("Enter the first value:");
-	scanf_s("%lf", &num1);
-	printf("Enter the second value:");
-	scanf_s("%lf", &num2);
-	result = num1 - num2;
-	printf("%.0lf - %.0lf = %.0lf\n", num1, num2, result);
+	double num1, num2, result;			// create the integers for the program to solve.
+	printf("Enter two values: ");	
+	scanf_s("%lf %lf", &num1, &num2);
+	result = num1 - num2;				// solve the values the user gave.
+	printf("%.lf - %.lf = %.lf\n", num1, num2, result);   // print out the results.
 }
